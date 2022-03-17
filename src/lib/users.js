@@ -4,7 +4,9 @@ export const usersCollection = firestore().collection('users')
 
 export function createUser({id, displayName, photoUrl}) {
     return usersCollection.doc(id).set({
-        id, displayName, photoUrl
+        id, 
+        displayName, 
+        photoUrl
     })
 }
 
