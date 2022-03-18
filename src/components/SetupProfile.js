@@ -28,8 +28,7 @@ function SetupProfile() {
             const extension = asset.fileName.split('.').pop()
             const reference = storage().ref(`/profile/${uid}.${extension}`)
             console.log('hi', reference)
-
-            // await reference.putFile(asset.uri)
+         
             await reference.putString(asset.base64, 'base64', {
                 contentType: asset.type,
             })
